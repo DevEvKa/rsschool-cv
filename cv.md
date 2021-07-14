@@ -14,3 +14,29 @@
     - Experience with a version control system (GIT)
     - Attention to detail, flexible with assignments
     - Positive attitude and ability to take ownership when it is necessary to solve problems
+5.  **Example of my code:**
+
+        ```
+
+    function validPass(password){
+    let isValid;
+    let result;
+    let pattern = /^(?=._\d)(?=._[a-z])[a-zA-Z0-9]{3,20}$/
+    isValid = pattern.test(password);
+    if (isValid) {
+    result = "VALID"  
+     } else {
+    result = "INVALID"
+    }
+    return result
+    }
+
+        ```
+
+6.  **Experience:**
+    - Take courses on Udemy: [WEB-разработчик 2021](https://www.udemy.com/course/webdeveloper/) (the course is completed by 68%), [Полный курс по JavaScript + React - с нуля до результата](https://www.udemy.com/course/javascript_full/) (the course is completed by 34%)
+    - Take courses on Code Basics: [JavaScript для начинающих](https://ru.code-basics.com/languages/javascript)
+    - Train programming skills on [codewars.com](https://www.codewars.com/)
+    - Listen podcasts on Yandex [Веб-стандарты](https://music.yandex.ru/album/6245956)
+7.  **Education:** Philologist (Germanic Philology), Volzhsky University after V.N. Tatischev, 2002-2007
+8.  **English:** B1+ (both speaking and writing). To maintain my current level of English, I read books in English (at the moment "Gone Girl" by Gillian Flynn) and watch movies ("Why women kill" is the last and my favorite one).
