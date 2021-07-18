@@ -1,13 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CV</title>
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="main__personal personal">
+        <div class="container">
+          <div class="personal__img">
+            <img
+              class="personal__photo"
+              src="images/photo.jpeg"
+              alt="Photo of a girl with brown hair in green-gray-white striped dress standing on a path in the park"
+            />
+          </div>
+          <div class="personal__info">
+            <h1 class="personal__name">Evgeniya Karabanova</h1>
+            <ul class="personal__contacts">
+              <li class="personal__contact personal__location">
+                Togliatty, Russia
+              </li>
+              <li class="personal__contact personal__email">
+                <a
+                  class="personal__link"
+                  target="_blanK"
+                  href="mailto:karabanovaep@yandex.ru?subject=Job interview invitation letter"
+                  >karabanovaep@yandex.ru</a
+                >
+              </li>
+              <li class="personal__contact personal__phone">
+                <a class="personal__link" href="tel:+79372144882"
+                  >+7 9372 14 48 82</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="main__summary summary">
+        <div class="container container-column">
+          <h2 class="summary__title section__title">Summary</h2>
+          <p class="summary__text">
+            Hello! My name is Evgeniya. I’m a software testing engineer at EPAM
+            Systems (Togliatty, Russia) and I’m fond of my job, my team and my
+            employer. And I also like to explore new technologies and constantly
+            improve my knowledge. Now front-end development is my great passion
+            and I’m ready to devote as much time and effort as necessary to
+            learn this area and to do my best.
+          </p>
+        </div>
+      </section>
+      <section class="main__skills skills">
+        <div class="container container-column">
+          <h2 class="skills__title section__title">Skills</h2>
+          <ul class="skills__list">
+            <li class="skills__item">HTML5</li>
+            <li class="skills__item">CSS3</li>
+            <li class="skills__item">Bootstrap</li>
+            <li class="skills__item">SVG</li>
+            <li class="skills__item">Sass/SCSS</li>
+            <li class="skills__item">JavaScript(intermediate)</li>
+            <li class="skills__item">Adobe Photoshop</li>
+            <li class="skills__item">Figma</li>
+            <li class="skills__item">GIT</li>
+            <li class="skills__item">JSON</li>
+            <li class="skills__item">XML</li>
+            <li class="skills__item">SQL</li>
+            <li class="skills__item">Software testing</li>
+            <li class="skills__item">Highly organized</li>
+            <li class="skills__item">Attention tj details</li>
+            <li class="skills__item">Critical thinking</li>
+            <li class="skills__item">Great in communication</li>
+            <li class="skills__item">Positive attitude</li>
+          </ul>
+        </div>
+      </section>
+      <section class="main__coding coding">
+        <div class="container container-column">
+          <h2 class="coding__title section__title">Example of my code</h2>
+          <div class="coding__task">
+            Task "<a
+              href="https://www.codewars.com/kata/59c01248bf10a47bd1000046"
+              class="coding__link"
+              >Validate my Password</a
+            >" on Codewars: "I will give you a string. You respond with "VALID"
+            if the string meets the requirements or "INVALID" if it does not.
+            Passwords must abide by the following requirements: More than 3
+            characters but less than 20. Must contain only alphanumeric
+            characters. Must contain letters and numbers."
+          </div>
+          <div class="coding__text">
+            <pre>
+function validPass(password){
+	let pattern = /^(?=.*\d)(?=.*[a-z])[a-zA-Z0-9]{3,20}$/;
+	isValid = pattern.test(password);
+	return (isValid) ? "VALID" : "INVALID"
+}
+
+//tests:
+console.log(validPass('g5M'));
+console.log(validPass('5555uuuu0000HHHH7777'));
+console.log(validPass('g5m'));
+
+console.log(validPass('g5М')); //М is a Cyrillic symbol
+console.log(validPass('5555uuuu0000HHHH77771'));
+console.log(validPass('gMl'));
+console.log(validPass('159'));
+console.log(validPass('gM+'));
+console.log(validPass(''));
+console.log(validPass('g M'));
+console.log(validPass('   '));
+						</pre
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </body>
 </html>
