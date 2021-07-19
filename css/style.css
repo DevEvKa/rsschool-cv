@@ -74,7 +74,7 @@ h6 {
   font-weight: inherit;
 }
 /*--------------------*/
-
+/* common styles*/
 body {
   background-color: #fff;
   font-family: "Poppins", sans-serif;
@@ -83,7 +83,8 @@ body {
   color: #000;
 }
 
-.main {
+.main,
+.footer {
   padding: 15px;
   margin: 0 auto;
   max-width: 1200px;
@@ -92,11 +93,14 @@ body {
 .main__personal,
 .main__summary,
 .main__skills,
-.main__coding {
-  max-width: 1200px;
+.main__coding,
+.main__experience,
+.main__education,
+.main__english,
+.footer__content {
   padding: 25px;
   margin-bottom: 1px;
-  box-shadow: 0 0 10px rgba(99, 120, 146) inset;
+  box-shadow: 0 0 10px #637892 inset;
 }
 
 .container {
@@ -114,6 +118,30 @@ body {
   font-weight: 700;
   text-align: center;
   margin-bottom: 15px;
+}
+
+.personal__link,
+.experience__link,
+.footer__link {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.personal__link:hover,
+.experience__link:hover {
+  color: #000000;
+}
+
+.personal__link:active,
+.experience__link:active {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.personal__link:visited,
+.experience__link:visited {
+  color: #000066;
+  text-decoration: underline;
 }
 
 /*styles for main__personal*/
@@ -153,10 +181,6 @@ body {
   padding-left: 35px;
   margin-bottom: 25px;
   position: relative;
-}
-
-.personal__link {
-  color: #000000;
 }
 
 .personal__contact::before {
@@ -238,4 +262,52 @@ body {
   border: 1px solid rgba(99, 120, 146);
   padding: 10px;
   color: #333;
+}
+
+/*styles for main__experience*/
+
+.experience__item {
+  position: relative;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  padding-left: 25px;
+}
+
+.experience__item::before {
+  content: "";
+  background-image: url(../images/reading.png);
+  width: 21px;
+  height: 21px;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+/*styles for footer*/
+
+.footer__content {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+}
+
+.footer__link {
+  margin-left: 10px;
+}
+
+.footer__logo {
+  width: 50%;
+  text-align: end;
+}
+
+.footer__logopic {
+  width: 120px;
+  height: 100%;
 }
