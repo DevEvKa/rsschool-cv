@@ -8,22 +8,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-  </head>
+
+    <!--Подключение highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
   <body>
+    <header class="header">
+      <div class="header__container container">
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a data-goto=".summary" href="#" class="nav__link">Summary</a>
+            </li>
+            <li class="nav__item">
+              <a data-goto=".skills" href="#" class="nav__link">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a data-goto=".coding" href="#" class="nav__link">Code</a>
+            </li>
+						<li class="nav__item">
+              <a data-goto=".project" href="#" class="nav__link">Project</a>
+            </li>
+            <li class="nav__item">
+              <a data-goto=".experience" href="#" class="nav__link"
+                >Experience</a
+              >
+            </li>
+            <li class="nav__item">
+              <a data-goto=".education" href="#" class="nav__link">Education</a>
+            </li>
+            <li class="nav__item">
+              <a data-goto=".english" href="#" class="nav__link">English</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__hamburger hamburger">
+          <span class="hamburger__item"></span>
+          <span class="hamburger__item"></span>
+          <span class="hamburger__item"></span>
+        </div>
+      </div>
+    </header>
     <main class="main">
       <section class="main__personal personal">
         <div class="container">
-          <div class="personal__img">
+          <aside class="personal__img">
             <img
               class="personal__photo"
               src="images/photo.jpeg"
               alt="Photo of a girl with brown hair in green-gray-white striped dress standing on a path in the park"
             />
-          </div>
+					</aside>
           <div class="personal__info">
             <h1 class="personal__name">Evgeniya Karabanova</h1>
             <ul class="personal__contacts">
@@ -101,6 +139,7 @@
           </div>
           <div class="coding__text">
             <pre>
+							<code>
 function validPass(password){
 	let pattern = /^(?=.*\d)(?=.*[a-z])[a-zA-Z0-9]{3,20}$/;
 	isValid = pattern.test(password);
@@ -119,9 +158,35 @@ console.log(validPass('159'));
 console.log(validPass('gM+'));
 console.log(validPass(''));
 console.log(validPass('g M'));
-console.log(validPass('   '));
-						</pre
+console.log(validPass('   '));								
+</code>
+</pre
             >
+          </div>
+        </div>
+      </section>
+			<section class="main__project project">
+        <div class="container container-column">
+          <h2 class="project__title section__title">Project example</h2>
+          <div class="project__descr">
+            <div class="project__name">
+							<p class="project__heading">Project title:</p>
+							<h3 class="project__title">Javascript random color generator</h3>
+						</div>
+						<div class="project__techologies technologies">
+							<p class="project__heading">Technologies:</p>
+							<ul class="technologies__list">
+							<li class="technologies__item">HTML5,</li>
+							<li class="technologies__item">CSS3,</li>
+							<li class="technologies__item">JS</li>
+						</ul>
+						</div> 
+
+						<div class="project__page">
+							<p class="project__heading">Description:</p>
+							<p class="project__text">A small colorful HEX color code generator built using HTML5, CSS3, JS. Check it <a href="https://devevka.github.io/Random-color-generator/" class="project__link" target="_blank">here</a>!</p>
+							
+						</div>
           </div>
         </div>
       </section>
@@ -197,12 +262,9 @@ console.log(validPass('   '));
         <div class="footer__content">
           <p class="footer__copyright">
             <time datetime="2021-07-19 23:03">2021</time>
-            <mark class="footer__mark">©</mark>
-            <a href="https://github.com/DevEvKa" class="footer__link"
-              >Karabanova Evgeniya</a
-            >
+							<a href="https://github.com/DevEvKa" class="footer__link"
+              >Karabanova Evgeniya</a>
           </p>
-
           <div class="footer__logo">
             <a href="https://rs.school/js/" class="logo__link"
               ><img
@@ -214,5 +276,8 @@ console.log(validPass('   '));
         </div>
       </div>
     </footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/javascript.min.js"></script>
+		<script src="js/main.js"></script>
   </body>
 </html>
