@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--Подключение highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a data-goto=".summary" href="#" class="nav__link">Summary</a>
+            </li>
+            <li class="nav__item">
+              <a data-goto=".skills" href="#" class="nav__link">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a data-goto=".coding" href="#" class="nav__link">Code</a>
+            </li>
+						<li class="nav__item">
+              <a data-goto=".project" href="#" class="nav__link">Project</a>
+            </li>
+            <li class="nav__item">
+              <a data-goto=".experience" href="#" class="nav__link"
+                >Experience</a
+              >
+            </li>
+            <li class="nav__item">
+              <a data-goto=".education" href="#" class="nav__link">Education</a>
+            </li>
+            <li class="nav__item">
+              <a data-goto=".english" href="#" class="nav__link">English</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__hamburger hamburger">
+          <span class="hamburger__item"></span>
+          <span class="hamburger__item"></span>
+          <span class="hamburger__item"></span>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main__personal personal">
+        <div class="container">
+          <aside class="personal__img">
+            <img
+              class="personal__photo"
+              src="images/photo.jpeg"
+              alt="Photo of a girl with brown hair in green-gray-white striped dress standing on a path in the park"
+            />
+					</aside>
+          <div class="personal__info">
+            <h1 class="personal__name">Evgeniya Karabanova</h1>
+            <ul class="personal__contacts">
+              <li class="personal__contact personal__location">
+                Togliatty, Russia
+              </li>
+              <li class="personal__contact personal__email">
+                <a
+                  class="personal__link"
+                  target="_blanK"
+                  href="mailto:karabanovaep@yandex.ru"
+                  >karabanovaep@yandex.ru</a
+                >
+              </li>
+              <li class="personal__contact personal__phone">
+                <a class="personal__link" href="tel:+79372144882"
+                  >+7 9372 14 48 82</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="main__summary summary">
+        <div class="container container-column">
+          <h2 class="summary__title section__title">Summary</h2>
+          <p class="summary__text">
+            Hello! My name is Evgeniya. I’m a software testing engineer at EPAM
+            Systems (Togliatty, Russia) and I’m fond of my job, my team and my
+            employer. And I also like to explore new technologies and constantly
+            improve my knowledge. Now front-end development is my great passion
+            and I’m ready to devote as much time and effort as necessary to
+            learn this area and to do my best.
+          </p>
+        </div>
+      </section>
+      <section class="main__skills skills">
+        <div class="container container-column">
+          <h2 class="skills__title section__title">Skills</h2>
+          <ul class="skills__list">
+            <li class="skills__item">HTML5</li>
+            <li class="skills__item">CSS3</li>
+            <li class="skills__item">Bootstrap</li>
+            <li class="skills__item">SVG</li>
+            <li class="skills__item">Sass/SCSS</li>
+            <li class="skills__item">JavaScript(intermediate)</li>
+            <li class="skills__item">Adobe Photoshop</li>
+            <li class="skills__item">Figma</li>
+            <li class="skills__item">GIT</li>
+            <li class="skills__item">JSON</li>
+            <li class="skills__item">XML</li>
+            <li class="skills__item">SQL</li>
+            <li class="skills__item">Software testing</li>
+            <li class="skills__item">Highly organized</li>
+            <li class="skills__item">Attention to details</li>
+            <li class="skills__item">Critical thinking</li>
+            <li class="skills__item">Great in communication</li>
+            <li class="skills__item">Positive attitude</li>
+          </ul>
+        </div>
+      </section>
+      <section class="main__coding coding">
+        <div class="container container-column">
+          <h2 class="coding__title section__title">Example of my code</h2>
+          <div class="coding__task">
+            Task "<a
+              href="https://www.codewars.com/kata/59c01248bf10a47bd1000046"
+              class="coding__link"
+              >Validate my Password</a
+            >" on Codewars: "I will give you a string. You respond with "VALID"
+            if the string meets the requirements or "INVALID" if it does not.
+            Passwords must abide by the following requirements: More than 3
+            characters but less than 20. Must contain only alphanumeric
+            characters. Must contain letters and numbers."
+          </div>
+          <div class="coding__text">
+            <pre>
+							<code>
+function validPass(password){
+	let pattern = /^(?=.*\d)(?=.*[a-z])[a-zA-Z0-9]{3,20}$/;
+	isValid = pattern.test(password);
+	return (isValid) ? "VALID" : "INVALID"
+}
+
+//tests:
+console.log(validPass('g5M'));
+console.log(validPass('5555uuuu0000HHHH7777'));
+console.log(validPass('g5m'));
+
+console.log(validPass('g5М')); //М is a Cyrillic symbol
+console.log(validPass('5555uuuu0000HHHH77771'));
+console.log(validPass('gMl'));
+console.log(validPass('159'));
+console.log(validPass('gM+'));
+console.log(validPass(''));
+console.log(validPass('g M'));
+console.log(validPass('   '));								
+</code>
+</pre
+            >
+          </div>
+        </div>
+      </section>
+			<section class="main__project project">
+        <div class="container container-column">
+          <h2 class="project__title section__title">Project example</h2>
+          <div class="project__descr">
+            <div class="project__name">
+							<p class="project__heading">Project title:</p>
+							<h3 class="project__title">Javascript random color generator</h3>
+						</div>
+						<div class="project__techologies technologies">
+							<p class="project__heading">Technologies:</p>
+							<ul class="technologies__list">
+							<li class="technologies__item">HTML5,</li>
+							<li class="technologies__item">CSS3,</li>
+							<li class="technologies__item">JS</li>
+						</ul>
+						</div> 
+
+						<div class="project__page">
+							<p class="project__heading">Description:</p>
+							<p class="project__text">A small colorful HEX color code generator built using HTML5, CSS3, JS. Check it <a href="https://devevka.github.io/Random-color-generator/" class="project__link" target="_blank">here</a>!</p>
+							
+						</div>
+          </div>
+        </div>
+      </section>
+      <section class="main__experience experience">
+        <div class="container container-column">
+          <h2 class="experience__title section__title">Experience</h2>
+          <ul class="experience__list">
+            <li class="experience__item">
+              Take courses on Udemy:
+              <a
+                href="https://www.udemy.com/course/webdeveloper/"
+                class="experience__link"
+                >WEB-разработчик 2021</a
+              >
+              (the course is completed by 68%),
+              <a
+                href="https://www.udemy.com/course/javascript_full/"
+                class="experience__link"
+                >Полный курс по JavaScript + React - с нуля до результата</a
+              >
+              (the course is completed by 34%)
+            </li>
+            <li class="experience__item">
+              Take course on Code Basics:
+              <a
+                href="https://ru.code-basics.com/languages/javascript"
+                class="experience__link"
+                >JavaScript для начинающих</a
+              >
+            </li>
+            <li class="experience__item">
+              Train programming skills on
+              <a
+                href="https://www.codewars.com/dashboard"
+                class="experience__link"
+                >codewars.com</a
+              >
+            </li>
+            <li class="experience__item">
+              Listen podcasts on Yandex
+              <a
+                href="https://music.yandex.ru/album/6245956"
+                class="experience__link"
+                >Веб-стандарты</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="main__education education">
+        <div class="container container-column">
+          <h2 class="education__title section__title">Education</h2>
+          <p class="education__text">
+            Philologist (Germanic Philology), Volzhsky University after V.N.
+            Tatischev, 2002-2007
+          </p>
+        </div>
+      </section>
+      <section class="main__english english">
+        <div class="container container-column">
+          <h2 class="english__title section__title">English level</h2>
+          <p class="english__text">
+            B1+ (both speaking and writing). To maintain my current level of
+            English, I read books in English (at the moment “Gone Girl” by
+            Gillian Flynn) and watch movies (“Why women kill” is the last and my
+            favorite one).
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <p class="footer__copyright">
+            <time datetime="2021-07-19 23:03">2021</time>
+							<a href="https://github.com/DevEvKa" class="footer__link"
+              >Karabanova Evgeniya</a>
+          </p>
+          <div class="footer__logo">
+            <a href="https://rs.school/js/" class="logo__link"
+              ><img
+                src="images/rs_school_js.svg"
+                alt="The Rolling Scopes School logo"
+                class="footer__logopic"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/languages/javascript.min.js"></script>
+		<script src="js/main.js"></script>
+  </body>
+</html>
